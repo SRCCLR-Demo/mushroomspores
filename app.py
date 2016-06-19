@@ -1,5 +1,5 @@
 import os
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
@@ -15,8 +15,14 @@ def get_id():
 
 @app.route('/todo/api/v1.0/currid/<int:newid>', methods = ['PUT'])
 def update_id():
-	currid = newid
+	currid = { 'currid': newid }
 	return currid
+
+@app.route('/todo/api/v1.0/currid/', methods = ['POST'])
+def post_id():
+	currid = { 'currid:' newid }
+	return currid
+	# return jsonify({'currid': currid}), 201
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
