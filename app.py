@@ -13,12 +13,12 @@ def hello():
 def get_id():
 	return jsonify(currid)
 
-@app.route('/todo/api/v1.0/currid/<int:newid>', methods = ['PUT'])
+@app.route('/todo/api/v1.0/currid/<int:newid>', methods=['PUT'])
 def update_id(newid):
 	currid = { 'currid': newid }
 	return currid
 
-@app.route('/todo/api/v1.0/currid', methods = ['POST'])
+@app.route('/todo/api/v1.0/currid', methods=['POST'])
 def post_id():
 	if not request.json:
 		print "fuck me in the poopstick, could not find request.json"
