@@ -15,12 +15,12 @@ def get_id():
 
 @app.route('/todo/api/v1.0/currid/<int:newid>', methods = ['PUT'])
 def update_id():
-	currid = { 'currid': request.json['newid'] }
+	currid = { 'currid:' newid }
 	return currid
 
 @app.route('/todo/api/v1.0/currid/', methods = ['POST'])
 def post_id():
-	currid = { 'currid:' newid }
+	currid = { 'currid': request.json['newid'] }
 	return currid
 	# return jsonify({'currid': currid}), 201
 
