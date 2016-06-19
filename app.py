@@ -19,7 +19,8 @@ def post_id():
 		print "fuck me in the poopstick, could not find request.json"
 	if not 'newid' in request.json:
 		print "double fuck me like a rack of boar"
-	print "okay this should fucking work now" + currid + " // " + request.json
+	print "okay this should fucking work now"
+	print request.json
 	new_currid = {'currid': request.json['newid']}
 	currid.append(new_currid)
 	print currid
