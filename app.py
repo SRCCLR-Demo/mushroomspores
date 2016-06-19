@@ -13,9 +13,10 @@ def hello():
 def get_id():
 	return jsonify(currid)
 
-@app.route('/todo/api/v1.0/currid/<int:new_id>', methods = ['PUT'])
+@app.route('/todo/api/v1.0/currid/<int:newid>', methods = ['PUT'])
 def update_id():
-	currid = new_id
+	currid = newid
+	return currid
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
