@@ -15,7 +15,7 @@ def get_id():
 
 @app.route('/todo/api/v1.0/currid/<int:newid>', methods = ['PUT'])
 def update_id(newid):
-	currid = { 'currid:' newid }
+	currid = { 'currid': newid }
 	return currid
 
 @app.route('/todo/api/v1.0/currid', methods = ['POST'])
