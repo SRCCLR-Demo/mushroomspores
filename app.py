@@ -20,8 +20,7 @@ def post_id():
 	if not 'newid' in request.json:
 		print "double fuck me like a rack of boar"
 	print "okay this should fucking work now"
-	print currid
-	currid = { 'currid': request.json['newid'] }
+	global currid = { 'currid': request.json['newid'] }
 	print currid
 	return jsonify({'currid': currid}), 201
 
