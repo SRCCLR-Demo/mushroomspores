@@ -20,12 +20,12 @@ def update_id(newid):
 
 @app.route('/todo/api/v1.0/currid', methods=['POST'])
 def post_id():
-	if not request.json:
+	if not request.form:
 		print "fuck me in the poopstick, could not find request.json"
-	if not 'newid' in request.json:
+	if not 'newid' in request.form:
 		print "double fuck me like a rack of boar"
 	print "okay this should fucking work now"
-	currid = { 'currid': request.json['newid'] }
+	currid = { 'currid': request.form['newid'] }
 	return jsonify({'currid': currid}), 201
 
 if __name__ == '__main__':
