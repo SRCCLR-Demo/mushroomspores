@@ -3,7 +3,7 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
-currid = 1
+currid = [{ 'currid': 1 }]
 
 @app.route('/')
 def hello():
@@ -19,8 +19,9 @@ def post_id():
 		print "fuck me in the poopstick, could not find request.json"
 	if not 'newid' in request.json:
 		print "double fuck me like a rack of boar"
-	print "okay this should fucking work now" + currid
-	currid = request.json['newid']
+	print "okay this should fucking work now" + currid + " // " + request.json
+	new_currid = {'currid': request.json['newid']}
+	currid.append(new_currid)
 	print currid
 	return jsonify({'currid': currid}), 201
 
