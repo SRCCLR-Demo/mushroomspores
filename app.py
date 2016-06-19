@@ -22,7 +22,7 @@ def post_id():
 	print "okay this should fucking work now"
 	print request.json
 	new_currid = {'currid': request.json['newid']}
-	currid = newid
+	currid = new_currid
 	print currid
 	return jsonify({'currid': currid}), 201
 
