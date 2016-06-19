@@ -10,7 +10,7 @@ def hello():
 
 @app.route('/todo/api/v1.0/currid', methods=['GET'])
 def get_id():
-	return jsonify({'currid': currid})
+	return jsonify(currid)
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
