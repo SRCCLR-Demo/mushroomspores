@@ -11,7 +11,7 @@ def hello():
 
 @app.route('/todo/api/v1.0/currid', methods=['GET'])
 def get_id():
-	return jsonify(currid)
+	return jsonify({'currid': currid})
 
 @app.route('/todo/api/v1.0/currid', methods=['POST'])
 def post_id():
