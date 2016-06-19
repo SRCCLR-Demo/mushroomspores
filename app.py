@@ -21,8 +21,7 @@ def get_id():
 @app.route('/todo/api/v1.0/currid/', methods = ['POST'])
 def post_id():
 	currid = { 'currid': request.json['newid'] }
-	return currid
-	# return jsonify({'currid': currid}), 201
+	return jsonify({'currid': currid}), 201
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
