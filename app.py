@@ -16,13 +16,13 @@ def get_id():
 @app.route('/todo/api/v1.0/currid', methods=['POST'])
 def post_id():
 	if not request.json:
-		print "fuck me in the poopstick, could not find request.json"
+		print "could not find request.json"
 	if not 'newid' in request.json:
 		print "double fuck me like a rack of boar"
 	print "okay this should fucking work now"
 	print request.json
 	new_currid = {'currid': request.json['newid']}
-	currid.append(new_currid)
+	currid = newid
 	print currid
 	return jsonify({'currid': currid}), 201
 
