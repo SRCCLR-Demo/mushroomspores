@@ -3,7 +3,7 @@ from flask import Flask, jsonify
 
 app = Flask(__name__)
 
-currid = { 'currid': 1 }
+currid = 1 
 @app.route('/')
 def hello():
     return 'Hello World!'
