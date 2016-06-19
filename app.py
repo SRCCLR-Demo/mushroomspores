@@ -13,10 +13,10 @@ def hello():
 def get_id():
 	return jsonify(currid)
 
-@app.route('/todo/api/v1.0/currid/<int:newid>', methods = ['PUT'])
-def update_id():
-	currid = { 'currid:' newid }
-	return currid
+# @app.route('/todo/api/v1.0/currid/<int:newid>', methods = ['PUT'])
+# def update_id():
+# 	currid = { 'currid:' newid }
+# 	return currid
 
 @app.route('/todo/api/v1.0/currid/', methods = ['POST'])
 def post_id():
