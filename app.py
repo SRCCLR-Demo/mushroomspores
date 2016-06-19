@@ -18,7 +18,7 @@ def get_id():
 # 	currid = { 'currid:' newid }
 # 	return currid
 
-@app.route('/todo/api/v1.0/currid/', methods = ['POST'])
+@app.route('/todo/api/v1.0/currid', methods = ['POST'])
 def post_id():
 	currid = { 'currid': request.json['newid'] }
 	return jsonify({'currid': currid}), 201
