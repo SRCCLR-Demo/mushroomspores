@@ -18,7 +18,7 @@ def post_id():
 	if not request.json:
 		print "could not find request.json"
 	if not 'newid' in request.json:
-		print "double fuck me like a rack of boar"
+		print "Jimmy is so terrible he scared newid out of request.json"
 	print "okay this should fucking work now"
 	print request.json
 	currid[0]['currid'] = request.json['newid']
