@@ -10,3 +10,5 @@ itsdangerous==0.24
 pymongo==2.7.1
 pytz==2014.4
 six==1.7.2
+psycopg2==2.6.2
+sqlalchemy=1.0.14
