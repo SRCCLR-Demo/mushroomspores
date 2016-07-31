@@ -1,10 +1,15 @@
 import os
 from flask import Flask, jsonify, request
+<<<<<<< HEAD
 from flask.ext.sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.config.from_pyfile('config.py')
 db = SQLAlchemy(app)
+=======
+
+app = Flask(__name__)
+>>>>>>> 3ec5f53e8238fd86b86e6c03ed633eedbda683f1
 
 currid = [{ 'currid': 1 }]
 
@@ -22,7 +27,7 @@ def post_id():
 		print "could not find request.json"
 	if not 'newid' in request.json:
 		print "Jimmy is so terrible he scared newid out of request.json"
-	print "okay this should fucking work now"
+	print "okay this should work now"
 	print request.json
 	currid[0]['currid'] = request.json['newid']
 	print currid
