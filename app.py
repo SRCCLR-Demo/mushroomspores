@@ -1,6 +1,5 @@
 import os
 from flask import Flask, jsonify, request
-<<<<<<< HEAD
 from flask.ext.sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
