@@ -6,10 +6,6 @@ from flask.ext.sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 app.config.from_pyfile('config.py')
 db = SQLAlchemy(app)
-=======
-
-app = Flask(__name__)
->>>>>>> 3ec5f53e8238fd86b86e6c03ed633eedbda683f1
 
 currid = [{ 'currid': 1 }]
 
